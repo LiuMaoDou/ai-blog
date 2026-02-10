@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git -C \"/Users/liujiannan/2026/ai-blog\" status:*)",
-      "Bash(git -C \"/Users/liujiannan/2026/ai-blog\" diff:*)"
+      "Bash(git -C \"/Users/liujiannan/2026/ai-blog\" diff:*)",
+      "WebFetch(domain:zensical.org)"
     ]
   }
 }
