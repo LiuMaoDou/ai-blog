@@ -18,6 +18,7 @@ icon: lucide/bot
    2. 前台安装后，在 OpenClaw 面板（屏幕最上方），右键，settings...，Permissions --> 开启所有权限
 
 
+
 常用命令：
 
 
@@ -31,6 +32,7 @@ openclaw gateway start
 # 关闭 gateway
 openclaw gateway stop
 ```
+
 
 
 我的场景：
