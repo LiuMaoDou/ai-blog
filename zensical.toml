@@ -47,11 +47,11 @@ Copyright &copy; 2026 @TED
 nav = [
   { "首页" = "index.md" },
   { "AI Basics" = [
-      { "Context Engineering" = "01 Context Engineering.md" },
+      { "01 Context Engineering" = "01 Context Engineering.md" },
     ]},
   { "AI技巧" = [
-      { "macOS LLM Token Free" = "01 macOS LLM Token Free.md" },
-      { "OpenClaw(龙虾)" = "02 OpenClaw(龙虾).md" },
+      { "01 macOS LLM Token Free" = "01 macOS LLM Token Free.md" },
+      { "02 OpenClaw(龙虾)" = "02 OpenClaw(龙虾).md" },
     ]},
 ]
 
