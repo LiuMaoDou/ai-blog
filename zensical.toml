@@ -50,7 +50,7 @@ nav = [
       { "01 Context Engineering" = "01 Context Engineering.md" },
     ]},
   { "AI技巧" = [
-      { "01 macOS LLM Token Free" = "01 macOS LLM Token Free.md" },
+      { "01 LLM Token Free" = "01 LLM Token Free.md" },
       { "02 OpenClaw(龙虾)" = "02 OpenClaw(龙虾).md" },
     ]},
 ]
