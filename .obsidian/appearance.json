@@ -1,4 +1,7 @@
 {
   "theme": "moonstone",
-  "cssTheme": "Border"
+  "cssTheme": "GitHub Theme",
+  "baseFontSize": 18,
+  "interfaceFontFamily": "Ubuntu,Yuanti SC",
+  "textFontFamily": "Cascadia Code"
 }
