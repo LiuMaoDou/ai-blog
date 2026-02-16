@@ -52,7 +52,7 @@ nav = [
   { "AI Citation" = [
       { "The Complete Guide to Building Skills for Claude" = "The-Complete-Guide-to-Building-Skills-for-Claude.md" },
     ]},
-  { "AI技巧" = [
+  { "AI Skills" = [
       { "01 LLM Token Free" = "01 LLM Token Free.md" },
       { "02 OpenClaw(龙虾)" = "02 OpenClaw(龙虾).md" },
     ]},
