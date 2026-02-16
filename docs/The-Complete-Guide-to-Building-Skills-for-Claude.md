@@ -105,6 +105,8 @@ Together, they enable users to accomplish complex tasks without needing to figur
 | **Function** | Provides real-time data access and tool invocation | Captures workflows and best practices |
 | **Scope** | What Claude can do | How Claude should do it |
 
+
+
 #### Why this matters for your MCP users
 
 **Without skills:**
