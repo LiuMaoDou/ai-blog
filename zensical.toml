@@ -49,6 +49,9 @@ nav = [
   { "AI Basics" = [
       { "01 Context Engineering" = "01 Context Engineering.md" },
     ]},
+  { "AI Citation" = [
+      { "The Complete Guide to Building Skills for Claude" = "The-Complete-Guide-to-Building-Skills-for-Claude.md" },
+    ]},
   { "AI技巧" = [
       { "01 LLM Token Free" = "01 LLM Token Free.md" },
       { "02 OpenClaw(龙虾)" = "02 OpenClaw(龙虾).md" },

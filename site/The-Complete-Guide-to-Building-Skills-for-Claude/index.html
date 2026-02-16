@@ -1,0 +1,3903 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My AI Blog...">
+      
+      
+        <meta name="author" content="TED LIU">
+      
+      
+        <link rel="canonical" href="https://ai-ip.xyz/The-Complete-Guide-to-Building-Skills-for-Claude/">
+      
+      
+        <link rel="prev" href="../01%20Context%20Engineering/">
+      
+      
+        <link rel="next" href="../01%20LLM%20Token%20Free/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="zensical-0.0.21">
+    
+    
+      
+        <title>The Complete Guide to Building Skills for Claude - TED‘s AI BLOG</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.f28b7ce3.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-complete-guide-to-building-skills-for-claude" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TED‘s AI BLOG" class="md-header__button md-logo" aria-label="TED‘s AI BLOG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-snail" viewBox="0 0 24 24"><path d="M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0"/><circle cx="10" cy="13" r="8"/><path d="M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6M18 3l1.1 2.2M22 3l-1.1 2.2"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TED‘s AI BLOG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Complete Guide to Building Skills for Claude
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01%20Context%20Engineering/" class="md-tabs__link">
+          
+  
+  AI Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  AI Citation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01%20LLM%20Token%20Free/" class="md-tabs__link">
+          
+  
+  AI技巧
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TED‘s AI BLOG" class="md-nav__button md-logo" aria-label="TED‘s AI BLOG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-snail" viewBox="0 0 24 24"><path d="M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0"/><circle cx="10" cy="13" r="8"/><path d="M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6M18 3l1.1 2.2M22 3l-1.1 2.2"/></svg>
+
+    </a>
+    TED‘s AI BLOG
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20Context%20Engineering/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    01 Context Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Citation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Citation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2zM5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    The Complete Guide to Building Skills for Claude
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2zM5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    The Complete Guide to Building Skills for Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-youll-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you'll learn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-this-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who this is for
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-paths-through-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Paths Through This Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 1: Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 1: Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a skill?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core design principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core design principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progressive-disclosure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Progressive Disclosure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#portability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-mcp-builders-skills-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For MCP Builders: Skills + Connectors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For MCP Builders: Skills + Connectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-kitchen-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The kitchen analogy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-they-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How they work together
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-your-mcp-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this matters for your MCP users
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-planning-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 2: Planning and Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 2: Planning and Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start with use cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-skill-use-case-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common skill use case categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common skill use case categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#category-1-document-asset-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category 1: Document &amp; Asset Creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category-2-workflow-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category 2: Workflow Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category-3-mcp-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category 3: MCP Enhancement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define success criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-frontmatter-the-most-important-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAML frontmatter: The most important part
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YAML frontmatter: The most important part">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimal-required-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal required format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security restrictions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-effective-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing effective skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing effective skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-description-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The description field
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-the-main-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing the main instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-common-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: [common scenario]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-common-error-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error: [Common error message]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error: [Common error message]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-bundled-resources-clearly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference bundled resources clearly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-progressive-disclosure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use progressive disclosure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-testing-and-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 3: Testing and Iteration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 3: Testing and Iteration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-testing-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Testing Approach
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Testing Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-triggering-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Triggering tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-functional-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Functional tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-performance-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Performance comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-skill-creator-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the skill-creator skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-based-on-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iteration based on feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-distribution-and-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 4: Distribution and Sharing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 4: Distribution and Sharing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-distribution-model-january-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current distribution model (January 2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-open-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An open standard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-skills-via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using skills via API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-approach-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended approach today
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positioning-your-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Positioning your skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-patterns-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 5: Patterns and Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 5: Patterns and Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-your-approach-problem-first-vs-tool-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing your approach: Problem-first vs. tool-first
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-sequential-workflow-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Sequential workflow orchestration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-multi-mcp-coordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Multi-MCP coordination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-iterative-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Iterative refinement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-context-aware-tool-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Context-aware tool selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-5-domain-specific-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Domain-specific intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skill-wont-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill won't upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-doesnt-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill doesn't trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-triggers-too-often" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill triggers too often
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-connection-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP connection issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-not-followed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions not followed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-context-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Large context issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-resources-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 6: Resources and References
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 6: Resources and References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#official-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Official Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools and Utilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-a-quick-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference A: Quick Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference A: Quick Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#during-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        During development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-b-yaml-frontmatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference B: YAML Frontmatter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference B: YAML Frontmatter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-optional-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All optional fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-c-complete-skill-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference C: Complete Skill Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI技巧
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI技巧
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20LLM%20Token%20Free/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sparkles" viewBox="0 0 24 24"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594zM20 2v4M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    01 LLM Token Free
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20OpenClaw(%E9%BE%99%E8%99%BE)/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    02 OpenClaw(龙虾)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-youll-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you'll learn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-this-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who this is for
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-paths-through-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Paths Through This Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 1: Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 1: Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a skill?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core design principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core design principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progressive-disclosure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Progressive Disclosure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#portability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-mcp-builders-skills-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For MCP Builders: Skills + Connectors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For MCP Builders: Skills + Connectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-kitchen-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The kitchen analogy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-they-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How they work together
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-your-mcp-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this matters for your MCP users
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-planning-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 2: Planning and Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 2: Planning and Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start with use cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-skill-use-case-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common skill use case categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common skill use case categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#category-1-document-asset-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category 1: Document &amp; Asset Creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category-2-workflow-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category 2: Workflow Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category-3-mcp-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category 3: MCP Enhancement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define success criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-frontmatter-the-most-important-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAML frontmatter: The most important part
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YAML frontmatter: The most important part">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimal-required-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal required format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security restrictions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-effective-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing effective skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing effective skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-description-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The description field
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-the-main-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing the main instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-common-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: [common scenario]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-common-error-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error: [Common error message]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error: [Common error message]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-bundled-resources-clearly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference bundled resources clearly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-progressive-disclosure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use progressive disclosure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-testing-and-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 3: Testing and Iteration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 3: Testing and Iteration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-testing-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Testing Approach
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Testing Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-triggering-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Triggering tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-functional-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Functional tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-performance-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Performance comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-skill-creator-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the skill-creator skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-based-on-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iteration based on feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-distribution-and-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 4: Distribution and Sharing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 4: Distribution and Sharing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-distribution-model-january-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current distribution model (January 2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-open-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An open standard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-skills-via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using skills via API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-approach-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended approach today
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positioning-your-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Positioning your skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-patterns-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 5: Patterns and Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 5: Patterns and Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-your-approach-problem-first-vs-tool-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing your approach: Problem-first vs. tool-first
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-sequential-workflow-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Sequential workflow orchestration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-multi-mcp-coordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Multi-MCP coordination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-iterative-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Iterative refinement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-context-aware-tool-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Context-aware tool selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-5-domain-specific-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Domain-specific intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skill-wont-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill won't upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-doesnt-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill doesn't trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-triggers-too-often" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill triggers too often
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-connection-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP connection issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-not-followed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions not followed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-context-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Large context issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-resources-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 6: Resources and References
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 6: Resources and References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#official-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Official Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools and Utilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-a-quick-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference A: Quick Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference A: Quick Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#during-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        During development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-b-yaml-frontmatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference B: YAML Frontmatter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference B: YAML Frontmatter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-optional-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All optional fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-c-complete-skill-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference C: Complete Skill Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    AI Citation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="the-complete-guide-to-building-skills-for-claude">The Complete Guide to Building Skills for Claude<a class="headerlink" href="#the-complete-guide-to-building-skills-for-claude" title="Permanent link">&para;</a></h1>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#chapter-1-fundamentals">Chapter 1: Fundamentals</a></li>
+<li><a href="#chapter-2-planning-and-design">Chapter 2: Planning and Design</a></li>
+<li><a href="#chapter-3-testing-and-iteration">Chapter 3: Testing and Iteration</a></li>
+<li><a href="#chapter-4-distribution-and-sharing">Chapter 4: Distribution and Sharing</a></li>
+<li><a href="#chapter-5-patterns-and-troubleshooting">Chapter 5: Patterns and Troubleshooting</a></li>
+<li><a href="#chapter-6-resources-and-references">Chapter 6: Resources and References</a></li>
+<li><a href="#reference-a-quick-checklist">Reference A: Quick Checklist</a></li>
+<li><a href="#reference-b-yaml-frontmatter">Reference B: YAML Frontmatter</a></li>
+<li><a href="#reference-c-complete-skill-examples">Reference C: Complete Skill Examples</a></li>
+</ul>
+<hr />
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>A <a href="https://claude.com/blog/skills">skill</a> is a set of instructions, packaged as a simple folder, that teaches Claude how to handle specific tasks or workflows. Skills are one of the most powerful ways to customize Claude for your specific needs. Instead of re-explaining your preferences, processes, and domain expertise in every conversation, skills let you teach Claude once and benefit every time.</p>
+<p>Skills are powerful when you have repeatable workflows: generating frontend designs from specs, conducting research with consistent methodology, creating documents that follow your team's style guide, or orchestrating multi-step processes. They work well with Claude's built-in capabilities like code execution and document creation. For those building MCP integrations, skills add another powerful layer helping turn raw tool access into reliable, optimized workflows.</p>
+<p>This guide covers everything you need to know to build effective skills, from planning and structure to testing and distribution. Whether you're building a skill for yourself, your team, or for the community, you'll find practical patterns and real-world examples throughout.</p>
+<h3 id="what-youll-learn">What you'll learn<a class="headerlink" href="#what-youll-learn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Technical requirements and best practices for skill structure</li>
+<li>Patterns for standalone skills and MCP-enhanced workflows</li>
+<li>Patterns we've seen work well across different use cases</li>
+<li>How to test, iterate, and distribute your skills</li>
+</ul>
+<h3 id="who-this-is-for">Who this is for<a class="headerlink" href="#who-this-is-for" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Developers who want Claude to follow specific workflows consistently</li>
+<li>Power users who want Claude to follow specific workflows</li>
+<li>Teams looking to standardize how Claude works across their organization</li>
+</ul>
+<h3 id="two-paths-through-this-guide">Two Paths Through This Guide<a class="headerlink" href="#two-paths-through-this-guide" title="Permanent link">&para;</a></h3>
+<p><strong>Building standalone skills?</strong> Focus on Fundamentals, Planning and Design, and category 1-2.</p>
+<p><strong>Enhancing an MCP integration?</strong> The "Skills + MCP" section and category 3 are for you.</p>
+<p>Both paths share the same technical requirements, but you choose what's relevant to your use case.</p>
+<p><strong>What you'll get out of this guide:</strong> By the end, you'll be able to build a functional skill in a single sitting. Expect about 15-30 minutes to build and test your first working skill using the skill-creator.</p>
+<hr />
+<h2 id="chapter-1-fundamentals">Chapter 1: Fundamentals<a class="headerlink" href="#chapter-1-fundamentals" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-skill">What is a skill?<a class="headerlink" href="#what-is-a-skill" title="Permanent link">&para;</a></h3>
+<p>A skill is a folder containing:</p>
+<ul>
+<li><strong>SKILL.md</strong> (required): Instructions in Markdown with YAML frontmatter</li>
+<li><strong>scripts/</strong> (optional): Executable code (Python, Bash, etc.)</li>
+<li><strong>references/</strong> (optional): Documentation loaded as needed</li>
+<li><strong>assets/</strong> (optional): Templates, fonts, icons used in output</li>
+</ul>
+<h3 id="core-design-principles">Core design principles<a class="headerlink" href="#core-design-principles" title="Permanent link">&para;</a></h3>
+<h4 id="progressive-disclosure">Progressive Disclosure<a class="headerlink" href="#progressive-disclosure" title="Permanent link">&para;</a></h4>
+<p>Skills use a three-level system:</p>
+<ul>
+<li><strong>First level (YAML frontmatter):</strong> Always loaded in Claude's system prompt. Provides just enough information for Claude to know when each skill should be used without loading all of it into context.</li>
+<li><strong>Second level (SKILL.md body):</strong> Loaded when Claude thinks the skill is relevant to the current task. Contains the full instructions and guidance.</li>
+<li><strong>Third level (Linked files):</strong> Additional files bundled within the skill directory that Claude can choose to navigate and discover only as needed.</li>
+</ul>
+<p>This progressive disclosure minimizes token usage while maintaining specialized expertise.</p>
+<h4 id="composability">Composability<a class="headerlink" href="#composability" title="Permanent link">&para;</a></h4>
+<p>Claude can load multiple skills simultaneously. Your skill should work well alongside others, not assume it's the only capability available.</p>
+<h4 id="portability">Portability<a class="headerlink" href="#portability" title="Permanent link">&para;</a></h4>
+<p>Skills work identically across Claude.ai, Claude Code, and API. Create a skill once and it works across all surfaces without modification, provided the environment supports any dependencies the skill requires.</p>
+<h3 id="for-mcp-builders-skills-connectors">For MCP Builders: Skills + Connectors<a class="headerlink" href="#for-mcp-builders-skills-connectors" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Building standalone skills without MCP? Skip to <a href="#chapter-2-planning-and-design">Planning and Design</a> - you can always return here later.</p>
+</blockquote>
+<p>If you already have a <a href="https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop">working MCP server</a>, you've done the hard part. Skills are the knowledge layer on top, capturing the workflows and best practices you already know, so Claude can apply them consistently.</p>
+<h4 id="the-kitchen-analogy">The kitchen analogy<a class="headerlink" href="#the-kitchen-analogy" title="Permanent link">&para;</a></h4>
+<p><strong>MCP</strong> provides the professional kitchen: access to tools, ingredients, and equipment.</p>
+<p><strong>Skills</strong> provide the recipes: step-by-step instructions on how to create something valuable.</p>
+<p>Together, they enable users to accomplish complex tasks without needing to figure out every step themselves.</p>
+<h4 id="how-they-work-together">How they work together<a class="headerlink" href="#how-they-work-together" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>MCP (Connectivity)</th>
+<th>Skills (Knowledge)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Connects Claude to your service (Notion, Asana, Linear, etc.)</td>
+<td>Teaches Claude how to use your service effectively</td>
+</tr>
+<tr>
+<td><strong>Function</strong></td>
+<td>Provides real-time data access and tool invocation</td>
+<td>Captures workflows and best practices</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>What Claude can do</td>
+<td>How Claude should do it</td>
+</tr>
+</tbody>
+</table>
+<h4 id="why-this-matters-for-your-mcp-users">Why this matters for your MCP users<a class="headerlink" href="#why-this-matters-for-your-mcp-users" title="Permanent link">&para;</a></h4>
+<p><strong>Without skills:</strong>
+- Users connect your MCP but don't know what to do next
+- Support tickets asking "how do I do X with your integration"
+- Each conversation starts from scratch
+- Inconsistent results because users prompt differently each time
+- Users blame your connector when the real issue is workflow guidance</p>
+<p><strong>With skills:</strong>
+- Pre-built workflows activate automatically when needed
+- Consistent, reliable tool usage
+- Best practices embedded in every interaction
+- Lower learning curve for your integration</p>
+<hr />
+<h2 id="chapter-2-planning-and-design">Chapter 2: Planning and Design<a class="headerlink" href="#chapter-2-planning-and-design" title="Permanent link">&para;</a></h2>
+<h3 id="start-with-use-cases">Start with use cases<a class="headerlink" href="#start-with-use-cases" title="Permanent link">&para;</a></h3>
+<p>Before writing any code, identify 2-3 concrete use cases your skill should enable.</p>
+<p><strong>Good use case definition:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Use Case: Project Sprint Planning
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Trigger: User says &quot;help me plan this sprint&quot; or &quot;create sprint tasks&quot;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Steps:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. Fetch current project status from Linear (via MCP)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2. Analyze team velocity and capacity
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>3. Suggest task prioritization
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>4. Create tasks in Linear with proper labels and estimates
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Result: Fully planned sprint with tasks created
+</span></code></pre></div>
+<p><strong>Ask yourself:</strong>
+- What does a user want to accomplish?
+- What multi-step workflows does this require?
+- Which tools are needed (built-in or MCP?)
+- What domain knowledge or best practices should be embedded?</p>
+<h3 id="common-skill-use-case-categories">Common skill use case categories<a class="headerlink" href="#common-skill-use-case-categories" title="Permanent link">&para;</a></h3>
+<p>At Anthropic, we've observed three common use cases:</p>
+<h4 id="category-1-document-asset-creation">Category 1: Document &amp; Asset Creation<a class="headerlink" href="#category-1-document-asset-creation" title="Permanent link">&para;</a></h4>
+<p><strong>Used for:</strong> Creating consistent, high-quality output including documents, presentations, apps, designs, code, etc.</p>
+<p><strong>Real example:</strong> <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">frontend-design skill</a> (also see <a href="https://github.com/anthropics/skills/tree/main/skills">skills for docx, pptx, xlsx, and ppt</a>)</p>
+<blockquote>
+<p>"Create distinctive, production-grade frontend interfaces with high design quality. Use when building web components, pages, artifacts, posters, or applications."</p>
+</blockquote>
+<p><strong>Key techniques:</strong>
+- Embedded style guides and brand standards
+- Template structures for consistent output
+- Quality checklists before finalizing
+- No external tools required - uses Claude's built-in capabilities</p>
+<h4 id="category-2-workflow-automation">Category 2: Workflow Automation<a class="headerlink" href="#category-2-workflow-automation" title="Permanent link">&para;</a></h4>
+<p><strong>Used for:</strong> Multi-step processes that benefit from consistent methodology, including coordination across multiple MCP servers.</p>
+<p><strong>Real example:</strong> <a href="https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md">skill-creator skill</a></p>
+<blockquote>
+<p>"Interactive guide for creating new skills. Walks the user through use case definition, frontmatter generation, instruction writing, and validation."</p>
+</blockquote>
+<p><strong>Key techniques:</strong>
+- Step-by-step workflow with validation gates
+- Templates for common structures
+- Built-in review and improvement suggestions
+- Iterative refinement loops</p>
+<h4 id="category-3-mcp-enhancement">Category 3: MCP Enhancement<a class="headerlink" href="#category-3-mcp-enhancement" title="Permanent link">&para;</a></h4>
+<p><strong>Used for:</strong> Workflow guidance to enhance the tool access an MCP server provides.</p>
+<p><strong>Real example:</strong> <a href="https://github.com/getsentry/sentry-for-claude/tree/main/skills">sentry-code-review skill (from Sentry)</a></p>
+<blockquote>
+<p>"Automatically analyzes and fixes detected bugs in GitHub Pull Requests using Sentry's error monitoring data via their MCP server."</p>
+</blockquote>
+<p><strong>Key techniques:</strong>
+- Coordinates multiple MCP calls in sequence
+- Embeds domain expertise
+- Provides context users would otherwise need to specify
+- Error handling for common MCP issues</p>
+<h3 id="define-success-criteria">Define success criteria<a class="headerlink" href="#define-success-criteria" title="Permanent link">&para;</a></h3>
+<p>How will you know your skill is working?</p>
+<p>These are aspirational targets, rough benchmarks rather than precise thresholds. Aim for rigor but accept that there will be an element of vibes-based assessment. We are actively developing more robust measurement guidance and tooling.</p>
+<p><strong>Quantitative metrics:</strong></p>
+<ul>
+<li><strong>Skill triggers on 90% of relevant queries</strong></li>
+<li>How to measure: Run 10-20 test queries that should trigger your skill. Track how many times it loads automatically vs. requires explicit invocation.</li>
+<li><strong>Completes workflow in X tool calls</strong></li>
+<li>How to measure: Compare the same task with and without the skill enabled. Count tool calls and total tokens consumed.</li>
+<li><strong>0 failed API calls per workflow</strong></li>
+<li>How to measure: Monitor MCP server logs during test runs. Track retry rates and error codes.</li>
+</ul>
+<p><strong>Qualitative metrics:</strong></p>
+<ul>
+<li><strong>Users don't need to prompt Claude about next steps</strong></li>
+<li>How to assess: During testing, note how often you need to redirect or clarify. Ask beta users for feedback.</li>
+<li><strong>Workflows complete without user correction</strong></li>
+<li>How to assess: Run the same request 3-5 times. Compare outputs for structural consistency and quality.</li>
+<li><strong>Consistent results across sessions</strong></li>
+<li>How to assess: Can a new user accomplish the task on first try with minimal guidance?</li>
+</ul>
+<h3 id="technical-requirements">Technical requirements<a class="headerlink" href="#technical-requirements" title="Permanent link">&para;</a></h3>
+<h4 id="file-structure">File structure<a class="headerlink" href="#file-structure" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>your-skill-name/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── SKILL.md                  # Required - main skill file
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── scripts/                  # Optional - executable code
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│    ├── process_data.py      # Example
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│    └── validate.sh          # Example
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── references/               # Optional - documentation
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│    ├── api-guide.md         # Example
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│    └── examples/            # Example
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>└── assets/                   # Optional - templates, etc.
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>     └── report-template.md   # Example
+</span></code></pre></div>
+<h4 id="critical-rules">Critical rules<a class="headerlink" href="#critical-rules" title="Permanent link">&para;</a></h4>
+<p><strong>SKILL.md naming:</strong>
+- Must be exactly <code>SKILL.md</code> (case-sensitive)
+- No variations accepted (<code>SKILL.MD</code>, <code>skill.md</code>, etc.)</p>
+<p><strong>Skill folder naming:</strong>
+- Use kebab-case: <code>notion-project-setup</code> ✅
+- No spaces: <code>Notion Project Setup</code> ❌
+- No underscores: <code>notion_project_setup</code> ❌
+- No capitals: <code>NotionProjectSetup</code> ❌</p>
+<p><strong>No README.md:</strong>
+- Don't include <code>README.md</code> inside your skill folder
+- All documentation goes in <code>SKILL.md</code> or <code>references/</code>
+- Note: when distributing via GitHub, you'll still want a repo-level README for human users (see Distribution and Sharing).</p>
+<h3 id="yaml-frontmatter-the-most-important-part">YAML frontmatter: The most important part<a class="headerlink" href="#yaml-frontmatter-the-most-important-part" title="Permanent link">&para;</a></h3>
+<p>The YAML frontmatter is how Claude decides whether to load your skill. Get this right.</p>
+<h4 id="minimal-required-format">Minimal required format<a class="headerlink" href="#minimal-required-format" title="Permanent link">&para;</a></h4>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nn">---</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your-skill-name</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">What it does. Use when user asks to [specific phrases].</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nn">---</span>
+</span></code></pre></div>
+<p>That's all you need to start.</p>
+<h4 id="field-requirements">Field requirements<a class="headerlink" href="#field-requirements" title="Permanent link">&para;</a></h4>
+<p><strong>name (required):</strong>
+- kebab-case only
+- No spaces or capitals
+- Should match folder name</p>
+<p><strong>description (required):</strong>
+- MUST include BOTH:
+  - What the skill does
+  - When to use it (trigger conditions)
+- Under 1024 characters
+- No XML tags (<code>&lt;</code> or <code>&gt;</code>)
+- Include specific tasks users might say
+- Mention file types if relevant</p>
+<p><strong>license (optional):</strong>
+- Use if making skill open source
+- Common: MIT, Apache-2.0</p>
+<p><strong>compatibility (optional):</strong>
+- 1-500 characters
+- Indicates environment requirements: e.g. intended product, required system packages, network access needs, etc.</p>
+<p><strong>metadata (optional):</strong>
+- Any custom key-value pairs
+- Suggested: author, version, mcp-server
+- Example:
+  <div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProjectHub</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">mcp-server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">projecthub</span>
+</span></code></pre></div></p>
+<h4 id="security-restrictions">Security restrictions<a class="headerlink" href="#security-restrictions" title="Permanent link">&para;</a></h4>
+<p><strong>Forbidden in frontmatter:</strong>
+- XML angle brackets (<code>&lt;</code> <code>&gt;</code>)
+- Skills with "claude" or "anthropic" in name (reserved)</p>
+<p><strong>Why:</strong> Frontmatter appears in Claude's system prompt. Malicious content could inject instructions.</p>
+<h3 id="writing-effective-skills">Writing effective skills<a class="headerlink" href="#writing-effective-skills" title="Permanent link">&para;</a></h3>
+<h4 id="the-description-field">The description field<a class="headerlink" href="#the-description-field" title="Permanent link">&para;</a></h4>
+<p>According to Anthropic's <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">engineering blog</a>: "This metadata...provides just enough information for Claude to know when each skill should be used without loading all of it into context." This is the first level of progressive disclosure.</p>
+<p><strong>Structure:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[What it does] + [When to use it] + [Key capabilities]
+</span></code></pre></div>
+<p><strong>Examples of good descriptions:</strong></p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Good - specific and actionable</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analyzes Figma design files and generates developer handoff</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">documentation. Use when user uploads .fig files, asks for &quot;design specs&quot;,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&quot;component documentation&quot;, or &quot;design-to-code handoff&quot;.</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># Good - includes trigger phrases</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Manages Linear project workflows including sprint planning,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">task creation, and status tracking. Use when user mentions &quot;sprint&quot;,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&quot;Linear tasks&quot;, &quot;project planning&quot;, or asks to &quot;create tickets&quot;.</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># Good - clear value proposition</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">End-to-end customer onboarding workflow for PayFlow. Handles</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">account creation, payment setup, and subscription management. Use when</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">user says &quot;onboard new customer&quot;, &quot;set up subscription&quot;, or &quot;create</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">PayFlow account&quot;.</span>
+</span></code></pre></div>
+<p><strong>Examples of bad descriptions:</strong></p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Too vague</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Helps with projects.</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Missing triggers</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Creates sophisticated multi-page documentation systems.</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Too technical, no user triggers</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Implements the Project entity model with hierarchical relationships.</span>
+</span></code></pre></div>
+<h3 id="writing-the-main-instructions">Writing the main instructions<a class="headerlink" href="#writing-the-main-instructions" title="Permanent link">&para;</a></h3>
+<p>After the frontmatter, write the actual instructions in Markdown.</p>
+<p><strong>Recommended structure:</strong></p>
+<p>Adapt this template for your skill. Replace bracketed sections with your specific content.</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>---
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>name: your-skill
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="gu">description: [...]</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="gu">---</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="gh"># Your Skill Name</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="gu">## Instructions</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="gu">### Step 1: [First Major Step]</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>Clear explanation of what happens.
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>Example:
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>```bash
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>python scripts/fetch_data.py --project-id PROJECT_ID
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>Expected output: [describe what success looks like]
+</span></code></pre></div>
+<p>(Add more steps as needed)</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="example-1-common-scenario">Example 1: [common scenario]<a class="headerlink" href="#example-1-common-scenario" title="Permanent link">&para;</a></h3>
+<p>User says: "Set up a new marketing campaign"</p>
+<p>Actions:
+1. Fetch existing campaigns via MCP
+2. Create new campaign with provided parameters</p>
+<p>Result: Campaign created with confirmation link</p>
+<p>(Add more examples as needed)</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="error-common-error-message">Error: [Common error message]<a class="headerlink" href="#error-common-error-message" title="Permanent link">&para;</a></h3>
+<p>Cause: [Why it happens]
+Solution: [How to fix]</p>
+<p>(Add more error cases as needed)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>### Best Practices for Instructions
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>#### Be Specific and Actionable
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>✅ **Good:**
+</span></code></pre></div>
+Run <code>python scripts/validate.py --input {filename}</code> to check data format.
+If validation fails, common issues include:
+- Missing required fields (add them to the CSV)
+- Invalid date formats (use YYYY-MM-DD)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>❌ **Bad:**
+</span></code></pre></div>
+Validate the data before proceeding.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>#### Include error handling
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>```markdown
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>## Common Issues
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>### MCP Connection Failed
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>If you see &quot;Connection refused&quot;:
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>1. Verify MCP server is running: Check Settings &gt; Extensions
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2. Confirm API key is valid
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>3. Try reconnecting: Settings &gt; Extensions &gt; [Your Service] &gt; Reconnect
+</span></code></pre></div></p>
+<h4 id="reference-bundled-resources-clearly">Reference bundled resources clearly<a class="headerlink" href="#reference-bundled-resources-clearly" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Before writing queries, consult `references/api-patterns.md` for:
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>- Rate limiting guidance
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>- Pagination patterns
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>- Error codes and handling
+</span></code></pre></div>
+<h4 id="use-progressive-disclosure">Use progressive disclosure<a class="headerlink" href="#use-progressive-disclosure" title="Permanent link">&para;</a></h4>
+<p>Keep <code>SKILL.md</code> focused on core instructions. Move detailed documentation to <code>references/</code> and link to it. (See <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">Core Design Principles</a> for how the three-level system works.)</p>
+<hr />
+<h2 id="chapter-3-testing-and-iteration">Chapter 3: Testing and Iteration<a class="headerlink" href="#chapter-3-testing-and-iteration" title="Permanent link">&para;</a></h2>
+<p>Skills can be tested at varying levels of rigor depending on your needs:</p>
+<ul>
+<li><strong>Manual testing in Claude.ai</strong> - Run queries directly and observe behavior. Fast iteration, no setup required.</li>
+<li><strong>Scripted testing in Claude Code</strong> - Automate test cases for repeatable validation across changes.</li>
+<li><strong>Programmatic testing via skills API</strong> - Build evaluation suites that run systematically against defined test sets.</li>
+</ul>
+<p>Choose the approach that matches your quality requirements and the visibility of your skill. A skill used internally by a small team has different testing needs than one deployed to thousands of enterprise users.</p>
+<blockquote>
+<p><strong>Pro Tip: Iterate on a single task before expanding</strong></p>
+<p>We've found that the most effective skill creators iterate on a single challenging task until Claude succeeds, then extract the winning approach into a skill. This leverages Claude's in-context learning and provides faster signal than broad testing. Once you have a working foundation, expand to multiple test cases for coverage.</p>
+</blockquote>
+<h3 id="recommended-testing-approach">Recommended Testing Approach<a class="headerlink" href="#recommended-testing-approach" title="Permanent link">&para;</a></h3>
+<p>Based on early experience, effective skills testing typically covers three areas:</p>
+<h4 id="1-triggering-tests">1. Triggering tests<a class="headerlink" href="#1-triggering-tests" title="Permanent link">&para;</a></h4>
+<p><strong>Goal:</strong> Ensure your skill loads at the right times.</p>
+<p><strong>Test cases:</strong>
+- ✅ Triggers on obvious tasks
+- ✅ Triggers on paraphrased requests
+- ❌ Doesn't trigger on unrelated topics</p>
+<p><strong>Example test suite:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Should trigger:
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>- &quot;Help me set up a new ProjectHub workspace&quot;
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>- &quot;I need to create a project in ProjectHub&quot;
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>- &quot;Initialize a ProjectHub project for Q4 planning&quot;
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>Should NOT trigger:
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>- &quot;What&#39;s the weather in San Francisco?&quot;
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>- &quot;Help me write Python code&quot;
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>- &quot;Create a spreadsheet&quot; (unless ProjectHub skill handles sheets)
+</span></code></pre></div>
+<h4 id="2-functional-tests">2. Functional tests<a class="headerlink" href="#2-functional-tests" title="Permanent link">&para;</a></h4>
+<p><strong>Goal:</strong> Verify the skill produces correct outputs.</p>
+<p><strong>Test cases:</strong>
+- Valid outputs generated
+- API calls succeed
+- Error handling works
+- Edge cases covered</p>
+<p><strong>Example:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Test: Create project with 5 tasks
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Given: Project name &quot;Q4 Planning&quot;, 5 task descriptions
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>When: Skill executes workflow
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Then:
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>   - Project created in ProjectHub
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>   - 5 tasks created with correct properties
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>   - All tasks linked to project
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>   - No API errors
+</span></code></pre></div>
+<h4 id="3-performance-comparison">3. Performance comparison<a class="headerlink" href="#3-performance-comparison" title="Permanent link">&para;</a></h4>
+<p><strong>Goal:</strong> Prove the skill improves results vs. baseline.</p>
+<p>Use the metrics from Define Success Criteria. Here's what a comparison might look like.</p>
+<p><strong>Baseline comparison:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Without skill:
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>- User provides instructions each time
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>- 15 back-and-forth messages
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>- 3 failed API calls requiring retry
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>- 12,000 tokens consumed
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>With skill:
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>- Automatic workflow execution
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>- 2 clarifying questions only
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>- 0 failed API calls
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>- 6,000 tokens consumed
+</span></code></pre></div>
+<h3 id="using-the-skill-creator-skill">Using the skill-creator skill<a class="headerlink" href="#using-the-skill-creator-skill" title="Permanent link">&para;</a></h3>
+<p>The skill-creator skill, available in Claude.ai via plugin directory or download for Claude Code, can help you build and iterate on skills. If you have an MCP server and know your top 2-3 workflows, you can build and test a functional skill in a single sitting, often in 15-30 minutes.</p>
+<p><strong>Creating skills:</strong>
+- Generate skills from natural language descriptions
+- Produce properly formatted SKILL.md with frontmatter
+- Suggest trigger phrases and structure</p>
+<p><strong>Reviewing skills:</strong>
+- Flag common issues (vague descriptions, missing triggers, structural problems)
+- Identify potential over/under-triggering risks
+- Suggest test cases based on the skill's stated purpose</p>
+<p><strong>Iterative improvement:</strong>
+- After using your skill and encountering edge cases or failures, bring those examples back to skill-creator
+- Example: "Use the issues &amp; solution identified in this chat to improve how the skill handles [specific edge case]"</p>
+<p><strong>To use:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&quot;Use the skill-creator skill to help me build a skill for [your use case]&quot;
+</span></code></pre></div>
+<p>Note: skill-creator helps you design and refine skills but does not execute automated test suites or produce quantitative evaluation results.</p>
+<h3 id="iteration-based-on-feedback">Iteration based on feedback<a class="headerlink" href="#iteration-based-on-feedback" title="Permanent link">&para;</a></h3>
+<p>Skills are living documents. Plan to iterate based on:</p>
+<p><strong>Undertriggering signals:</strong>
+- Skill doesn't load when it should
+- Users manually enabling it
+- Support questions about when to use it</p>
+<blockquote>
+<p><strong>Solution:</strong> Add more detail and nuance to the description - this may include keywords particularly for technical terms</p>
+</blockquote>
+<p><strong>Overtriggering signals:</strong>
+- Skill loads for irrelevant queries
+- Users disabling it
+- Confusion about purpose</p>
+<blockquote>
+<p><strong>Solution:</strong> Add negative triggers, be more specific</p>
+</blockquote>
+<p><strong>Execution issues:</strong>
+- Inconsistent results
+- API call failures
+- User corrections needed</p>
+<blockquote>
+<p><strong>Solution:</strong> Improve instructions, add error handling</p>
+</blockquote>
+<hr />
+<h2 id="chapter-4-distribution-and-sharing">Chapter 4: Distribution and Sharing<a class="headerlink" href="#chapter-4-distribution-and-sharing" title="Permanent link">&para;</a></h2>
+<p>Skills make your MCP integration more complete. As users compare connectors, those with skills offer a faster path to value, giving you an edge over MCP-only alternatives.</p>
+<h3 id="current-distribution-model-january-2026">Current distribution model (January 2026)<a class="headerlink" href="#current-distribution-model-january-2026" title="Permanent link">&para;</a></h3>
+<p><strong>How individual users get skills:</strong></p>
+<ol>
+<li>Download the skill folder</li>
+<li>Zip the folder (if needed)</li>
+<li>Upload to Claude.ai via Settings &gt; Capabilities &gt; Skills</li>
+<li>Or place in Claude Code skills directory</li>
+</ol>
+<p><strong>Organization-level skills:</strong>
+- Admins can deploy skills workspace-wide (shipped December 18, 2025)
+- Automatic updates
+- Centralized management</p>
+<h3 id="an-open-standard">An open standard<a class="headerlink" href="#an-open-standard" title="Permanent link">&para;</a></h3>
+<p>We've published <a href="https://agentskills.io/home">Agent Skills</a> as an open standard. Like MCP, we believe skills should be portable across tools and platforms - the same skill should work whether you're using Claude or other AI platforms. That said, some skills are designed to take full advantage of a specific platform's capabilities; authors can note this in the skill's compatibility field. We've been collaborating with members of the ecosystem on the standard, and we're excited by early adoption.</p>
+<h3 id="using-skills-via-api">Using skills via API<a class="headerlink" href="#using-skills-via-api" title="Permanent link">&para;</a></h3>
+<p>For programmatic use cases, such as building applications, agents, or automated workflows that leverage skills, the API provides direct control over skill management and execution.</p>
+<p><strong>Key capabilities:</strong>
+- <code>/v1/skills</code> endpoint for listing and managing skills
+- Add skills to Messages API requests via the <code>container.skills</code> parameter
+- Version control and management through the Claude Console
+- Works with the Claude Agent SDK for building custom agents</p>
+<p><strong>When to use skills via the API vs. Claude.ai:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Best Surface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>End users interacting with skills directly</td>
+<td>Claude.ai / Claude Code</td>
+</tr>
+<tr>
+<td>Manual testing and iteration during development</td>
+<td>Claude.ai / Claude Code</td>
+</tr>
+<tr>
+<td>Individual, ad-hoc workflows</td>
+<td>Claude.ai / Claude Code</td>
+</tr>
+<tr>
+<td>Applications using skills programmatically</td>
+<td>API</td>
+</tr>
+<tr>
+<td>Production deployments at scale</td>
+<td>API</td>
+</tr>
+<tr>
+<td>Automated pipelines and agent systems</td>
+<td>API</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Skills in the API require the Code Execution Tool beta, which provides the secure environment skills need to run.</p>
+<p><strong>For implementation details, see:</strong>
+- <a href="https://docs.claude.com/en/docs/agents-and-tools/agent-skills/quickstart">Skills API Quickstart</a>
+- <a href="https://docs.claude.com/en/api/skills/create-skill">Create Custom skills</a>
+- <a href="https://docs.claude.com/en/docs/agent-sdk/skills">Skills in the Agent SDK</a></p>
+<h3 id="recommended-approach-today">Recommended approach today<a class="headerlink" href="#recommended-approach-today" title="Permanent link">&para;</a></h3>
+<p>Start by hosting your skill on GitHub with a public repo, clear README (for human visitors - this is separate from your skill folder, which should not contain a README.md), and example usage with screenshots. Then add a section to your MCP documentation that links to the skill, explains why using both together is valuable, and provides a quick-start guide.</p>
+<ol>
+<li><strong>Host on GitHub</strong></li>
+<li>Public repo for open-source skills</li>
+<li>Clear README with installation instructions</li>
+<li>
+<p>Example usage and screenshots</p>
+</li>
+<li>
+<p><strong>Document in Your MCP Repo</strong></p>
+</li>
+<li>Link to skills from MCP documentation</li>
+<li>Explain the value of using both together</li>
+<li>
+<p>Provide quick-start guide</p>
+</li>
+<li>
+<p><strong>Create an Installation Guide</strong></p>
+</li>
+</ol>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gu">## Installing the [Your Service] skill</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">1.</span> Download the skill:
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Clone repo: <span class="sb">`git clone https://github.com/yourcompany/skills`</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Or download ZIP from Releases
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="k">2.</span> Install in Claude:
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Open Claude.ai &gt; Settings &gt; Skills
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Click &quot;Upload skill&quot;
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Select the skill folder (zipped)
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="k">3.</span> Enable the skill:
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Toggle on the [Your Service] skill
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Ensure your MCP server is connected
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="k">4.</span> Test:
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Ask Claude: &quot;Set up a new project in [Your Service]&quot;
+</span></code></pre></div>
+<h3 id="positioning-your-skill">Positioning your skill<a class="headerlink" href="#positioning-your-skill" title="Permanent link">&para;</a></h3>
+<p>How you describe your skill determines whether users understand its value and actually try it. When writing about your skill - in your README, documentation, or marketing - keep these principles in mind.</p>
+<p><strong>Focus on outcomes, not features:</strong></p>
+<p>✅ <strong>Good:</strong></p>
+<blockquote>
+<p>"The ProjectHub skill enables teams to set up complete project workspaces in seconds - including pages, databases, and templates - instead of spending 30 minutes on manual setup."</p>
+</blockquote>
+<p>❌ <strong>Bad:</strong></p>
+<blockquote>
+<p>"The ProjectHub skill is a folder containing YAML frontmatter and Markdown instructions that calls our MCP server tools."</p>
+</blockquote>
+<p><strong>Highlight the MCP + skills story:</strong></p>
+<blockquote>
+<p>"Our MCP server gives Claude access to your Linear projects. Our skills teach Claude your team's sprint planning workflow. Together, they enable AI-powered project management."</p>
+</blockquote>
+<hr />
+<h2 id="chapter-5-patterns-and-troubleshooting">Chapter 5: Patterns and Troubleshooting<a class="headerlink" href="#chapter-5-patterns-and-troubleshooting" title="Permanent link">&para;</a></h2>
+<p>These patterns emerged from skills created by early adopters and internal teams. They represent common approaches we've seen work well, not prescriptive templates.</p>
+<h3 id="choosing-your-approach-problem-first-vs-tool-first">Choosing your approach: Problem-first vs. tool-first<a class="headerlink" href="#choosing-your-approach-problem-first-vs-tool-first" title="Permanent link">&para;</a></h3>
+<p>Think of it like Home Depot. You might walk in with a problem - "I need to fix a kitchen cabinet" - and an employee points you to the right tools. Or you might pick out a new drill and ask how to use it for your specific job.</p>
+<p>Skills work the same way:</p>
+<ul>
+<li><strong>Problem-first:</strong> "I need to set up a project workspace" - Your skill orchestrates the right MCP calls in the right sequence. Users describe outcomes; the skill handles the tools.</li>
+<li><strong>Tool-first:</strong> "I have Notion MCP connected" - Your skill teaches Claude the optimal workflows and best practices. Users have access; the skill provides expertise.</li>
+</ul>
+<p>Most skills lean one direction. Knowing which framing fits your use case helps you choose the right pattern below.</p>
+<h3 id="pattern-1-sequential-workflow-orchestration">Pattern 1: Sequential workflow orchestration<a class="headerlink" href="#pattern-1-sequential-workflow-orchestration" title="Permanent link">&para;</a></h3>
+<p><strong>Use when:</strong> Your users need multi-step processes in a specific order.</p>
+<p><strong>Example structure:</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gu">## Workflow: Onboard New Customer</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="gu">### Step 1: Create Account</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>Call MCP tool: <span class="sb">`create_customer`</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Parameters: name, email, company
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="gu">### Step 2: Setup Payment</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>Call MCP tool: <span class="sb">`setup_payment_method`</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Wait for: payment method verification
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="gu">### Step 3: Create Subscription</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>Call MCP tool: <span class="sb">`create_subscription`</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>Parameters: plan_id, customer_id (from Step 1)
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="gu">### Step 4: Send Welcome Email</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>Call MCP tool: <span class="sb">`send_email`</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>Template: welcome_email_template
+</span></code></pre></div>
+<p><strong>Key techniques:</strong>
+- Explicit step ordering
+- Dependencies between steps
+- Validation at each stage
+- Rollback instructions for failures</p>
+<h3 id="pattern-2-multi-mcp-coordination">Pattern 2: Multi-MCP coordination<a class="headerlink" href="#pattern-2-multi-mcp-coordination" title="Permanent link">&para;</a></h3>
+<p><strong>Use when:</strong> Workflows span multiple services.</p>
+<p><strong>Example: Design-to-development handoff</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gu">### Phase 1: Design Export (Figma MCP)</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">1.</span> Export design assets from Figma
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">2.</span> Generate design specifications
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">3.</span> Create asset manifest
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="gu">### Phase 2: Asset Storage (Drive MCP)</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="k">1.</span> Create project folder in Drive
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="k">2.</span> Upload all assets
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="k">3.</span> Generate shareable links
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="gu">### Phase 3: Task Creation (Linear MCP)</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="k">1.</span> Create development tasks
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="k">2.</span> Attach asset links to tasks
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="k">3.</span> Assign to engineering team
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="gu">### Phase 4: Notification (Slack MCP)</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="k">1.</span> Post handoff summary to <span class="ni">#engineering</span>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="k">2.</span> Include asset links and task references
+</span></code></pre></div>
+<p><strong>Key techniques:</strong>
+- Clear phase separation
+- Data passing between MCPs
+- Validation before moving to next phase
+- Centralized error handling</p>
+<h3 id="pattern-3-iterative-refinement">Pattern 3: Iterative refinement<a class="headerlink" href="#pattern-3-iterative-refinement" title="Permanent link">&para;</a></h3>
+<p><strong>Use when:</strong> Output quality improves with iteration.</p>
+<p><strong>Example: Report generation</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="gu">## Iterative Report Creation</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="gu">### Initial Draft</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="k">1.</span> Fetch data via MCP
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">2.</span> Generate first draft report
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">3.</span> Save to temporary file
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="gu">### Quality Check</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="k">1.</span> Run validation script: <span class="sb">`scripts/check_report.py`</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="k">2.</span> Identify issues:
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Missing sections
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Inconsistent formatting
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Data validation errors
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="gu">### Refinement Loop</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="k">1.</span> Address each identified issue
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="k">2.</span> Regenerate affected sections
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="k">3.</span> Re-validate
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="k">4.</span> Repeat until quality threshold met
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="gu">### Finalization</span>
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="k">1.</span> Apply final formatting
+</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="k">2.</span> Generate summary
+</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a><span class="k">3.</span> Save final version
+</span></code></pre></div>
+<p><strong>Key techniques:</strong>
+- Explicit quality criteria
+- Iterative improvement
+- Validation scripts
+- Know when to stop iterating</p>
+<h3 id="pattern-4-context-aware-tool-selection">Pattern 4: Context-aware tool selection<a class="headerlink" href="#pattern-4-context-aware-tool-selection" title="Permanent link">&para;</a></h3>
+<p><strong>Use when:</strong> Same outcome, different tools depending on context.</p>
+<p><strong>Example: File storage</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="gu">## Smart File Storage</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="gu">### Decision Tree</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="k">1.</span> Check file type and size
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="k">2.</span> Determine best storage location:
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Large files (&gt;10MB): Use cloud storage MCP
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Collaborative docs: Use Notion/Docs MCP
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Code files: Use GitHub MCP
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Temporary files: Use local storage
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="gu">### Execute Storage</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>Based on decision:
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="k">-</span><span class="w"> </span>Call appropriate MCP tool
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="k">-</span><span class="w"> </span>Apply service-specific metadata
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="k">-</span><span class="w"> </span>Generate access link
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="gu">### Provide Context to User</span>
+</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>Explain why that storage was chosen
+</span></code></pre></div>
+<p><strong>Key techniques:</strong>
+- Clear decision criteria
+- Fallback options
+- Transparency about choices</p>
+<h3 id="pattern-5-domain-specific-intelligence">Pattern 5: Domain-specific intelligence<a class="headerlink" href="#pattern-5-domain-specific-intelligence" title="Permanent link">&para;</a></h3>
+<p><strong>Use when:</strong> Your skill adds specialized knowledge beyond tool access.</p>
+<p><strong>Example: Financial compliance</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gu">## Payment Processing with Compliance</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="gu">### Before Processing (Compliance Check)</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="k">1.</span> Fetch transaction details via MCP
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="k">2.</span> Apply compliance rules:
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Check sanctions lists
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Verify jurisdiction allowances
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Assess risk level
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="k">3.</span> Document compliance decision
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="gu">### Processing</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>IF compliance passed:
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Call payment processing MCP tool
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Apply appropriate fraud checks
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Process transaction
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>ELSE:
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Flag for review
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Create compliance case
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="gu">### Audit Trail</span>
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="k">-</span><span class="w"> </span>Log all compliance checks
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="k">-</span><span class="w"> </span>Record processing decisions
+</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="k">-</span><span class="w"> </span>Generate audit report
+</span></code></pre></div>
+<p><strong>Key techniques:</strong>
+- Domain expertise embedded in logic
+- Compliance before action
+- Comprehensive documentation
+- Clear governance</p>
+<h3 id="troubleshooting_1">Troubleshooting<a class="headerlink" href="#troubleshooting_1" title="Permanent link">&para;</a></h3>
+<h4 id="skill-wont-upload">Skill won't upload<a class="headerlink" href="#skill-wont-upload" title="Permanent link">&para;</a></h4>
+<p><strong>Error: "Could not find SKILL.md in uploaded folder"</strong></p>
+<p>Cause: File not named exactly SKILL.md</p>
+<p>Solution:
+- Rename to <code>SKILL.md</code> (case-sensitive)
+- Verify with: <code>ls -la</code> should show <code>SKILL.md</code></p>
+<p><strong>Error: "Invalid frontmatter"</strong></p>
+<p>Cause: YAML formatting issue</p>
+<p>Common mistakes:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># Wrong - missing delimiters</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-skill</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Does things</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1"># Wrong - unclosed quotes</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-skill</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Does</span><span class="nv"> </span><span class="s">things</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="s">#</span><span class="nv"> </span><span class="s">Correct</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="s">---</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="s">name:</span><span class="nv"> </span><span class="s">my-skill</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="s">description:</span><span class="nv"> </span><span class="s">Does</span><span class="nv"> </span><span class="s">things</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="s">---</span>
+</span></code></pre></div>
+<p><strong>Error: "Invalid skill name"</strong></p>
+<p>Cause: Name has spaces or capitals</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Wrong</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Cool Skill</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># Correct</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-cool-skill</span>
+</span></code></pre></div>
+<h4 id="skill-doesnt-trigger">Skill doesn't trigger<a class="headerlink" href="#skill-doesnt-trigger" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Skill never loads automatically</p>
+<p><strong>Fix:</strong> Revise your description field. See The Description Field for good/bad examples.</p>
+<p><strong>Quick checklist:</strong>
+- Is it too generic? ("Helps with projects" won't work)
+- Does it include trigger phrases users would actually say?
+- Does it mention relevant file types if applicable?</p>
+<p><strong>Debugging approach:</strong> Ask Claude: "When would you use the [skill name] skill?" Claude will quote the description back. Adjust based on what's missing.</p>
+<h4 id="skill-triggers-too-often">Skill triggers too often<a class="headerlink" href="#skill-triggers-too-often" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Skill loads for unrelated queries</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Add negative triggers</strong></li>
+</ol>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Advanced data analysis for CSV files. Use for statistical</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">modeling, regression, clustering. Do NOT use for simple data exploration</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(use data-viz skill instead).</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Be more specific</strong></li>
+</ol>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># Too broad</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Processes documents</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1"># More specific</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Processes PDF legal documents for contract review</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Clarify scope</strong></li>
+</ol>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PayFlow payment processing for e-commerce. Use specifically</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">for online payment workflows, not for general financial queries.</span>
+</span></code></pre></div>
+<h4 id="mcp-connection-issues">MCP connection issues<a class="headerlink" href="#mcp-connection-issues" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Skill loads but MCP calls fail</p>
+<p><strong>Checklist:</strong></p>
+<ol>
+<li><strong>Verify MCP server is connected</strong></li>
+<li>Claude.ai: Settings &gt; Extensions &gt; [Your Service]</li>
+<li>
+<p>Should show "Connected" status</p>
+</li>
+<li>
+<p><strong>Check authentication</strong></p>
+</li>
+<li>API keys valid and not expired</li>
+<li>Proper permissions/scopes granted</li>
+<li>
+<p>OAuth tokens refreshed</p>
+</li>
+<li>
+<p><strong>Test MCP independently</strong></p>
+</li>
+<li>Ask Claude to call MCP directly (without skill)</li>
+<li>"Use [Service] MCP to fetch my projects"</li>
+<li>
+<p>If this fails, issue is MCP not skill</p>
+</li>
+<li>
+<p><strong>Verify tool names</strong></p>
+</li>
+<li>Skill references correct MCP tool names</li>
+<li>Check MCP server documentation</li>
+<li>Tool names are case-sensitive</li>
+</ol>
+<h4 id="instructions-not-followed">Instructions not followed<a class="headerlink" href="#instructions-not-followed" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Skill loads but Claude doesn't follow instructions</p>
+<p><strong>Common causes:</strong></p>
+<ol>
+<li><strong>Instructions too verbose</strong></li>
+<li>Keep instructions concise</li>
+<li>Use bullet points and numbered lists</li>
+<li>
+<p>Move detailed reference to separate files</p>
+</li>
+<li>
+<p><strong>Instructions buried</strong></p>
+</li>
+<li>Put critical instructions at the top</li>
+<li>Use <code>## Important</code> or <code>## Critical</code> headers</li>
+<li>
+<p>Repeat key points if needed</p>
+</li>
+<li>
+<p><strong>Ambiguous language</strong></p>
+</li>
+</ol>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gh"># Bad</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Make sure to validate things properly
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="gh"># Good</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>CRITICAL: Before calling create_project, verify:
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="k">-</span><span class="w"> </span>Project name is non-empty
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="k">-</span><span class="w"> </span>At least one team member assigned
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="k">-</span><span class="w"> </span>Start date is not in the past
+</span></code></pre></div>
+<p><strong>Advanced technique:</strong> For critical validations, consider bundling a script that performs the checks programmatically rather than relying on language instructions. Code is deterministic; language interpretation isn't. See the <a href="https://github.com/anthropics/skills/tree/main/skills">Office skills</a> for examples of this pattern.</p>
+<ol>
+<li><strong>Model "laziness"</strong> - Add explicit encouragement:</li>
+</ol>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="gu">## Performance Notes</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="k">-</span><span class="w"> </span>Take your time to do this thoroughly
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">-</span><span class="w"> </span>Quality is more important than speed
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="k">-</span><span class="w"> </span>Do not skip validation steps
+</span></code></pre></div>
+<p>Note: Adding this to user prompts is more effective than in SKILL.md.</p>
+<h4 id="large-context-issues">Large context issues<a class="headerlink" href="#large-context-issues" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Skill seems slow or responses degraded</p>
+<p><strong>Causes:</strong>
+- Skill content too large
+- Too many skills enabled simultaneously
+- All content loaded instead of progressive disclosure</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Optimize SKILL.md size</strong></li>
+<li>Move detailed docs to <code>references/</code></li>
+<li>Link to references instead of inline</li>
+<li>
+<p>Keep SKILL.md under 5,000 words</p>
+</li>
+<li>
+<p><strong>Reduce enabled skills</strong></p>
+</li>
+<li>Evaluate if you have more than 20-50 skills enabled simultaneously</li>
+<li>Recommend selective enablement</li>
+<li>Consider skill "packs" for related capabilities</li>
+</ol>
+<hr />
+<h2 id="chapter-6-resources-and-references">Chapter 6: Resources and References<a class="headerlink" href="#chapter-6-resources-and-references" title="Permanent link">&para;</a></h2>
+<p>If you're building your first skill, start with the <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices">Best Practices Guide</a>, then reference the API docs as needed.</p>
+<h3 id="official-documentation">Official Documentation<a class="headerlink" href="#official-documentation" title="Permanent link">&para;</a></h3>
+<p><strong>Anthropic Resources:</strong>
+- <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices">Best Practices Guide</a>
+- <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview">Skills Documentation</a>
+- <a href="https://platform.claude.com/docs/en/api/overview">API Reference</a>
+- <a href="https://modelcontextprotocol.io">MCP Documentation</a></p>
+<p><strong>Blog Posts:</strong>
+- <a href="https://claude.com/blog/skills">Introducing Agent Skills</a>
+- <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">Engineering Blog: Equipping Agents for the Real World</a>
+- <a href="https://www.claude.com/blog/skills-explained">Skills Explained</a>
+- <a href="https://www.claude.com/blog/how-to-create-skills-key-steps-limitations-and-examples">How to Create Skills for Claude</a>
+- <a href="https://www.claude.com/blog/building-skills-for-claude-code">Building Skills for Claude Code</a>
+- <a href="https://www.claude.com/blog/improving-frontend-design-through-skills">Improving Frontend Design through Skills</a></p>
+<h3 id="example-skills">Example skills<a class="headerlink" href="#example-skills" title="Permanent link">&para;</a></h3>
+<p><strong>Public skills repository:</strong>
+- GitHub: <a href="https://github.com/anthropics/skills">anthropics/skills</a>
+- Contains Anthropic-created skills you can customize</p>
+<h3 id="tools-and-utilities">Tools and Utilities<a class="headerlink" href="#tools-and-utilities" title="Permanent link">&para;</a></h3>
+<p><strong>skill-creator skill:</strong>
+- Built into Claude.ai and available for Claude Code
+- Can generate skills from descriptions
+- Reviews and provides recommendations
+- Use: "Help me build a skill using skill-creator"</p>
+<p><strong>Validation:</strong>
+- skill-creator can assess your skills
+- Ask: "Review this skill and suggest improvements"</p>
+<h3 id="getting-support">Getting Support<a class="headerlink" href="#getting-support" title="Permanent link">&para;</a></h3>
+<p><strong>For Technical Questions:</strong>
+- General questions: Community forums at the <a href="https://discord.com/invite/6PPFFzqPDZ">Claude Developers Discord</a></p>
+<p><strong>For Bug Reports:</strong>
+- GitHub Issues: <a href="https://github.com/anthropics/skills/issues">anthropics/skills/issues</a>
+- Include: Skill name, error message, steps to reproduce</p>
+<hr />
+<h2 id="reference-a-quick-checklist">Reference A: Quick Checklist<a class="headerlink" href="#reference-a-quick-checklist" title="Permanent link">&para;</a></h2>
+<p>Use this checklist to validate your skill before and after upload. If you want a faster start, use the skill-creator skill to generate your first draft, then run through this list to make sure you haven't missed anything.</p>
+<h3 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identified 2-3 concrete use cases</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tools identified (built-in or MCP)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Reviewed this guide and example skills</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Planned folder structure</li>
+</ul>
+<h3 id="during-development">During development<a class="headerlink" href="#during-development" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Folder named in kebab-case</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SKILL.md file exists (exact spelling)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> YAML frontmatter has <code>---</code> delimiters</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> name field: kebab-case, no spaces, no capitals</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> description includes WHAT and WHEN</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No XML tags (<code>&lt;</code> <code>&gt;</code>) anywhere</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Instructions are clear and actionable</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Error handling included</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Examples provided</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> References clearly linked</li>
+</ul>
+<h3 id="before-upload">Before upload<a class="headerlink" href="#before-upload" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tested triggering on obvious tasks</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tested triggering on paraphrased requests</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Verified doesn't trigger on unrelated topics</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Functional tests pass</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tool integration works (if applicable)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Compressed as .zip file</li>
+</ul>
+<h3 id="after-upload">After upload<a class="headerlink" href="#after-upload" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Test in real conversations</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Monitor for under/over-triggering</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Collect user feedback</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Iterate on description and instructions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Update version in metadata</li>
+</ul>
+<hr />
+<h2 id="reference-b-yaml-frontmatter">Reference B: YAML Frontmatter<a class="headerlink" href="#reference-b-yaml-frontmatter" title="Permanent link">&para;</a></h2>
+<h3 id="required-fields">Required fields<a class="headerlink" href="#required-fields" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nn">---</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill-name-in-kebab-case</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">What it does and when to use it. Include specific trigger phrases.</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="nn">---</span>
+</span></code></pre></div>
+<h3 id="all-optional-fields">All optional fields<a class="headerlink" href="#all-optional-fields" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skill-name</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">required description</span><span class="p p-Indicator">]</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="nt">license</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MIT</span><span class="w"> </span><span class="c1"># Optional: License for open-source</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="nt">allowed-tools</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Bash(python:*)</span><span class="nv"> </span><span class="s">Bash(npm:*)</span><span class="nv"> </span><span class="s">WebFetch&quot;</span><span class="w"> </span><span class="c1"># Optional: Restrict tool access</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="c1"># Optional: Custom fields</span>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="w">  </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Company Name</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="w">  </span><span class="nt">mcp-server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">server-name</span>
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">productivity</span>
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="w">  </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">project-management</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">automation</span><span class="p p-Indicator">]</span>
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="w">  </span><span class="nt">documentation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://example.com/docs</span>
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="w">  </span><span class="nt">support</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">support@example.com</span>
+</span></code></pre></div>
+<h3 id="security-notes">Security notes<a class="headerlink" href="#security-notes" title="Permanent link">&para;</a></h3>
+<p><strong>Allowed:</strong>
+- Any standard YAML types (strings, numbers, booleans, lists, objects)
+- Custom metadata fields
+- Long descriptions (up to 1024 characters)</p>
+<p><strong>Forbidden:</strong>
+- XML angle brackets (<code>&lt;</code> <code>&gt;</code>) - security restriction
+- Code execution in YAML (uses safe YAML parsing)
+- Skills named with "claude" or "anthropic" prefix (reserved)</p>
+<hr />
+<h2 id="reference-c-complete-skill-examples">Reference C: Complete Skill Examples<a class="headerlink" href="#reference-c-complete-skill-examples" title="Permanent link">&para;</a></h2>
+<p>For full, production-ready skills demonstrating the patterns in this guide:</p>
+<ul>
+<li><strong>Document Skills</strong> - <a href="https://github.com/anthropics/skills/tree/main/skills/pdf">PDF</a>, <a href="https://github.com/anthropics/skills/tree/main/skills/docx">DOCX</a>, <a href="https://github.com/anthropics/skills/tree/main/skills/pptx">PPTX</a>, <a href="https://github.com/anthropics/skills/tree/main/skills/xlsx">XLSX</a> creation</li>
+<li><strong><a href="https://github.com/anthropics/skills/tree/main/skills">Example Skills</a></strong> - Various workflow patterns</li>
+<li><strong><a href="https://www.claude.com/connectors">Partner Skills Directory</a></strong> - View skills from various partners such as Asana, Atlassian, Canva, Figma, Sentry, Zapier, and more</li>
+</ul>
+<p>These repositories stay up-to-date and include additional examples beyond what's covered here. Clone them, modify them for your use case, and use them as templates.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01%20Context%20Engineering/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01 Context Engineering">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                01 Context Engineering
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../01%20LLM%20Token%20Free/" class="md-footer__link md-footer__link--next" aria-label="Next: 01 LLM Token Free">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                01 LLM Token Free
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 @TED
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.36a64b72.min.js"></script>
+      
+    
+  </body>
+</html>
