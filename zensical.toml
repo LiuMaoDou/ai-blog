@@ -46,11 +46,9 @@ Copyright &copy; 2026 @TED
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "首页" = "index.md" },
-  { "AI Basics" = [
-      { "01 Context Engineering" = "01 Context Engineering.md" },
-    ]},
   { "AI Citation" = [
-      { "The Complete Guide to Building Skills for Claude" = "The-Complete-Guide-to-Building-Skills-for-Claude.md" },
+      { "01 Context Engineering" = "01 Context Engineering.md" },
+      { "02 The Complete Guide to Building Skills for Claude" = "The-Complete-Guide-to-Building-Skills-for-Claude.md" },
     ]},
   { "AI Skills" = [
       { "01 LLM Token Free" = "01 LLM Token Free.md" },
