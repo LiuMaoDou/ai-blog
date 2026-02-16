@@ -146,6 +146,7 @@ Result: Fully planned sprint with tasks created
 ```
 
 **Ask yourself:**
+
 - What does a user want to accomplish?
 - What multi-step workflows does this require?
 - Which tools are needed (built-in or MCP?)
@@ -164,6 +165,7 @@ At Anthropic, we've observed three common use cases:
 > "Create distinctive, production-grade frontend interfaces with high design quality. Use when building web components, pages, artifacts, posters, or applications."
 
 **Key techniques:**
+
 - Embedded style guides and brand standards
 - Template structures for consistent output
 - Quality checklists before finalizing
@@ -178,6 +180,7 @@ At Anthropic, we've observed three common use cases:
 > "Interactive guide for creating new skills. Walks the user through use case definition, frontmatter generation, instruction writing, and validation."
 
 **Key techniques:**
+
 - Step-by-step workflow with validation gates
 - Templates for common structures
 - Built-in review and improvement suggestions
@@ -192,6 +195,7 @@ At Anthropic, we've observed three common use cases:
 > "Automatically analyzes and fixes detected bugs in GitHub Pull Requests using Sentry's error monitoring data via their MCP server."
 
 **Key techniques:**
+
 - Coordinates multiple MCP calls in sequence
 - Embeds domain expertise
 - Provides context users would otherwise need to specify
@@ -241,16 +245,19 @@ your-skill-name/
 #### Critical rules
 
 **SKILL.md naming:**
+
 - Must be exactly `SKILL.md` (case-sensitive)
 - No variations accepted (`SKILL.MD`, `skill.md`, etc.)
 
 **Skill folder naming:**
+
 - Use kebab-case: `notion-project-setup` ✅
 - No spaces: `Notion Project Setup` ❌
 - No underscores: `notion_project_setup` ❌
 - No capitals: `NotionProjectSetup` ❌
 
 **No README.md:**
+
 - Don't include `README.md` inside your skill folder
 - All documentation goes in `SKILL.md` or `references/`
 - Note: when distributing via GitHub, you'll still want a repo-level README for human users (see Distribution and Sharing).
@@ -273,11 +280,13 @@ That's all you need to start.
 #### Field requirements
 
 **name (required):**
+
 - kebab-case only
 - No spaces or capitals
 - Should match folder name
 
 **description (required):**
+
 - MUST include BOTH:
   - What the skill does
   - When to use it (trigger conditions)
@@ -287,14 +296,17 @@ That's all you need to start.
 - Mention file types if relevant
 
 **license (optional):**
+
 - Use if making skill open source
 - Common: MIT, Apache-2.0
 
 **compatibility (optional):**
+
 - 1-500 characters
 - Indicates environment requirements: e.g. intended product, required system packages, network access needs, etc.
 
 **metadata (optional):**
+
 - Any custom key-value pairs
 - Suggested: author, version, mcp-server
 - Example:
@@ -308,6 +320,7 @@ That's all you need to start.
 #### Security restrictions
 
 **Forbidden in frontmatter:**
+
 - XML angle brackets (`<` `>`)
 - Skills with "claude" or "anthropic" in name (reserved)
 
@@ -419,6 +432,7 @@ Solution: [How to fix]
 ```
 Run `python scripts/validate.py --input {filename}` to check data format.
 If validation fails, common issues include:
+
 - Missing required fields (add them to the CSV)
 - Invalid date formats (use YYYY-MM-DD)
 ```
@@ -445,6 +459,7 @@ If you see "Connection refused":
 
 ```
 Before writing queries, consult `references/api-patterns.md` for:
+
 - Rate limiting guidance
 - Pagination patterns
 - Error codes and handling
@@ -479,6 +494,7 @@ Based on early experience, effective skills testing typically covers three areas
 **Goal:** Ensure your skill loads at the right times.
 
 **Test cases:**
+
 - ✅ Triggers on obvious tasks
 - ✅ Triggers on paraphrased requests
 - ❌ Doesn't trigger on unrelated topics
@@ -487,11 +503,13 @@ Based on early experience, effective skills testing typically covers three areas
 
 ```
 Should trigger:
+
 - "Help me set up a new ProjectHub workspace"
 - "I need to create a project in ProjectHub"
 - "Initialize a ProjectHub project for Q4 planning"
 
 Should NOT trigger:
+
 - "What's the weather in San Francisco?"
 - "Help me write Python code"
 - "Create a spreadsheet" (unless ProjectHub skill handles sheets)
@@ -502,6 +520,7 @@ Should NOT trigger:
 **Goal:** Verify the skill produces correct outputs.
 
 **Test cases:**
+
 - Valid outputs generated
 - API calls succeed
 - Error handling works
@@ -530,12 +549,14 @@ Use the metrics from Define Success Criteria. Here's what a comparison might loo
 
 ```
 Without skill:
+
 - User provides instructions each time
 - 15 back-and-forth messages
 - 3 failed API calls requiring retry
 - 12,000 tokens consumed
 
 With skill:
+
 - Automatic workflow execution
 - 2 clarifying questions only
 - 0 failed API calls
@@ -547,16 +568,19 @@ With skill:
 The skill-creator skill, available in Claude.ai via plugin directory or download for Claude Code, can help you build and iterate on skills. If you have an MCP server and know your top 2-3 workflows, you can build and test a functional skill in a single sitting, often in 15-30 minutes.
 
 **Creating skills:**
+
 - Generate skills from natural language descriptions
 - Produce properly formatted SKILL.md with frontmatter
 - Suggest trigger phrases and structure
 
 **Reviewing skills:**
+
 - Flag common issues (vague descriptions, missing triggers, structural problems)
 - Identify potential over/under-triggering risks
 - Suggest test cases based on the skill's stated purpose
 
 **Iterative improvement:**
+
 - After using your skill and encountering edge cases or failures, bring those examples back to skill-creator
 - Example: "Use the issues & solution identified in this chat to improve how the skill handles [specific edge case]"
 
@@ -573,6 +597,7 @@ Note: skill-creator helps you design and refine skills but does not execute auto
 Skills are living documents. Plan to iterate based on:
 
 **Undertriggering signals:**
+
 - Skill doesn't load when it should
 - Users manually enabling it
 - Support questions about when to use it
@@ -580,6 +605,7 @@ Skills are living documents. Plan to iterate based on:
 > **Solution:** Add more detail and nuance to the description - this may include keywords particularly for technical terms
 
 **Overtriggering signals:**
+
 - Skill loads for irrelevant queries
 - Users disabling it
 - Confusion about purpose
@@ -587,6 +613,7 @@ Skills are living documents. Plan to iterate based on:
 > **Solution:** Add negative triggers, be more specific
 
 **Execution issues:**
+
 - Inconsistent results
 - API call failures
 - User corrections needed
@@ -609,6 +636,7 @@ Skills make your MCP integration more complete. As users compare connectors, tho
 4. Or place in Claude Code skills directory
 
 **Organization-level skills:**
+
 - Admins can deploy skills workspace-wide (shipped December 18, 2025)
 - Automatic updates
 - Centralized management
@@ -622,6 +650,7 @@ We've published [Agent Skills](https://agentskills.io/home) as an open standard.
 For programmatic use cases, such as building applications, agents, or automated workflows that leverage skills, the API provides direct control over skill management and execution.
 
 **Key capabilities:**
+
 - `/v1/skills` endpoint for listing and managing skills
 - Add skills to Messages API requests via the `container.skills` parameter
 - Version control and management through the Claude Console
@@ -641,6 +670,7 @@ For programmatic use cases, such as building applications, agents, or automated 
 Note: Skills in the API require the Code Execution Tool beta, which provides the secure environment skills need to run.
 
 **For implementation details, see:**
+
 - [Skills API Quickstart](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/quickstart)
 - [Create Custom skills](https://docs.claude.com/en/api/skills/create-skill)
 - [Skills in the Agent SDK](https://docs.claude.com/en/docs/agent-sdk/skills)
@@ -743,6 +773,7 @@ Template: welcome_email_template
 ```
 
 **Key techniques:**
+
 - Explicit step ordering
 - Dependencies between steps
 - Validation at each stage
@@ -776,6 +807,7 @@ Template: welcome_email_template
 ```
 
 **Key techniques:**
+
 - Clear phase separation
 - Data passing between MCPs
 - Validation before moving to next phase
@@ -815,6 +847,7 @@ Template: welcome_email_template
 ```
 
 **Key techniques:**
+
 - Explicit quality criteria
 - Iterative improvement
 - Validation scripts
@@ -839,6 +872,7 @@ Template: welcome_email_template
 
 ### Execute Storage
 Based on decision:
+
 - Call appropriate MCP tool
 - Apply service-specific metadata
 - Generate access link
@@ -848,6 +882,7 @@ Explain why that storage was chosen
 ```
 
 **Key techniques:**
+
 - Clear decision criteria
 - Fallback options
 - Transparency about choices
@@ -885,6 +920,7 @@ ELSE:
 ```
 
 **Key techniques:**
+
 - Domain expertise embedded in logic
 - Compliance before action
 - Comprehensive documentation
@@ -899,6 +935,7 @@ ELSE:
 Cause: File not named exactly SKILL.md
 
 Solution:
+
 - Rename to `SKILL.md` (case-sensitive)
 - Verify with: `ls -la` should show `SKILL.md`
 
@@ -943,6 +980,7 @@ name: my-cool-skill
 **Fix:** Revise your description field. See The Description Field for good/bad examples.
 
 **Quick checklist:**
+
 - Is it too generic? ("Helps with projects" won't work)
 - Does it include trigger phrases users would actually say?
 - Does it mention relevant file types if applicable?
@@ -1029,6 +1067,7 @@ Make sure to validate things properly
 
 # Good
 CRITICAL: Before calling create_project, verify:
+
 - Project name is non-empty
 - At least one team member assigned
 - Start date is not in the past
@@ -1052,6 +1091,7 @@ Note: Adding this to user prompts is more effective than in SKILL.md.
 **Symptom:** Skill seems slow or responses degraded
 
 **Causes:**
+
 - Skill content too large
 - Too many skills enabled simultaneously
 - All content loaded instead of progressive disclosure
@@ -1077,12 +1117,14 @@ If you're building your first skill, start with the [Best Practices Guide](https
 ### Official Documentation
 
 **Anthropic Resources:**
+
 - [Best Practices Guide](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)
 - [Skills Documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
 - [API Reference](https://platform.claude.com/docs/en/api/overview)
 - [MCP Documentation](https://modelcontextprotocol.io)
 
 **Blog Posts:**
+
 - [Introducing Agent Skills](https://claude.com/blog/skills)
 - [Engineering Blog: Equipping Agents for the Real World](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 - [Skills Explained](https://www.claude.com/blog/skills-explained)
@@ -1093,27 +1135,32 @@ If you're building your first skill, start with the [Best Practices Guide](https
 ### Example skills
 
 **Public skills repository:**
+
 - GitHub: [anthropics/skills](https://github.com/anthropics/skills)
 - Contains Anthropic-created skills you can customize
 
 ### Tools and Utilities
 
 **skill-creator skill:**
+
 - Built into Claude.ai and available for Claude Code
 - Can generate skills from descriptions
 - Reviews and provides recommendations
 - Use: "Help me build a skill using skill-creator"
 
 **Validation:**
+
 - skill-creator can assess your skills
 - Ask: "Review this skill and suggest improvements"
 
 ### Getting Support
 
 **For Technical Questions:**
+
 - General questions: Community forums at the [Claude Developers Discord](https://discord.com/invite/6PPFFzqPDZ)
 
 **For Bug Reports:**
+
 - GitHub Issues: [anthropics/skills/issues](https://github.com/anthropics/skills/issues)
 - Include: Skill name, error message, steps to reproduce
 
@@ -1193,11 +1240,13 @@ metadata: # Optional: Custom fields
 ### Security notes
 
 **Allowed:**
+
 - Any standard YAML types (strings, numbers, booleans, lists, objects)
 - Custom metadata fields
 - Long descriptions (up to 1024 characters)
 
 **Forbidden:**
+
 - XML angle brackets (`<` `>`) - security restriction
 - Code execution in YAML (uses safe YAML parsing)
 - Skills named with "claude" or "anthropic" prefix (reserved)

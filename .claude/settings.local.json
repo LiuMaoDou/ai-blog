@@ -4,7 +4,9 @@
       "Bash(git -C \"/Users/liujiannan/2026/ai-blog\" status:*)",
       "Bash(git -C \"/Users/liujiannan/2026/ai-blog\" diff:*)",
       "WebFetch(domain:zensical.org)",
-      "Bash(uv run zensical build:*)"
+      "Bash(uv run zensical build:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)"
     ]
   }
 }
