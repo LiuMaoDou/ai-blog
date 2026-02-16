@@ -110,6 +110,7 @@ Together, they enable users to accomplish complex tasks without needing to figur
 #### Why this matters for your MCP users
 
 **Without skills:**
+
 - Users connect your MCP but don't know what to do next
 - Support tickets asking "how do I do X with your integration"
 - Each conversation starts from scratch
@@ -117,6 +118,7 @@ Together, they enable users to accomplish complex tasks without needing to figur
 - Users blame your connector when the real issue is workflow guidance
 
 **With skills:**
+
 - Pre-built workflows activate automatically when needed
 - Consistent, reliable tool usage
 - Best practices embedded in every interaction
