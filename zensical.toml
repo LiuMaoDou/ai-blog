@@ -45,8 +45,8 @@ Copyright &copy; 2026 @TED
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
+  { "首页" = "index.md" },
   { "2026" = [
-      { "首页" = "index.md" },
       { "Context Engineering" = "Context Engineering.md" },
       { "The Complete Guide to Building Skills for Claude" = "The-Complete-Guide-to-Building-Skills-for-Claude.md" },
       { "LLM Token Free" = "LLM Token Free.md" },

@@ -2,3 +2,20 @@
   --md-text-font: "Ubuntu", "Yuanti SC", "Microsoft YaHei", sans-serif;
   --md-code-font: "Cascadia Code", Menlo, monospace;
 }
+
+.md-main__inner {
+  margin-top: 0.7rem;
+}
+
+.md-content__inner {
+  padding-top: 0.25rem;
+}
+
+.md-content__inner::before {
+  height: 0;
+}
+
+.md-path {
+  margin-top: 0;
+  padding-top: 0.2rem;
+}
