@@ -1,0 +1,23 @@
+# IDE / Editor
+.idea/
+
+# Obsidian
+.obsidian/
+
+# Claude local settings
+.claude/
+
+# Python version file
+.python-version
+
+# Python virtual environment
+.venv/
+
+# Build cache
+.cache/
+
+# macOS
+.DS_Store
+
+# Generated site output
+site/
